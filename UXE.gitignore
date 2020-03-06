@@ -1,0 +1,33 @@
+# ignore the temp file
+*.xeBitMode
+# AxisWork/
+*.db
+*.sdb
+*.args
+*.design
+*.ixcom
+*.f
+*.libmaprx
+# INCA_libs
+*.lock
+*.lib
+*.ts
+*.env
+*.var
+*.hrd
+*.nc
+*.tag
+*.cdsvmod
+*.lnx8664
+# xc_work
+*.pak
+*.c
+*.af
+*.so
+*.txt
+*.qel
+*.mak
+*.rc
+*.tmo
+*.ccf
+*.par
