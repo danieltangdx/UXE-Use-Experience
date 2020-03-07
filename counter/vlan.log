@@ -1,0 +1,22 @@
+// Log started on host: pld615 at : Sat Mar  7 14:35:46 2020
+ 
+
+******************************************************************************
+vlan - UXE, V17.1.0.p97
+(c) 2020 Cadence Design Systems, Inc.  All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+******************************************************************************
+
+Executing ... vlan (64bit) - Tue Aug 27 17:22:34 PDT 2019
+
+Command Arguments:
+  counter_tb.v
+Compiling source file "counter_tb.v"
+	Errors : 0 Warnings : 0 Info : 0
+
+ // Log end : Sat Mar  7 14:35:46 2020
+
+
+	vlan: cpu time = 0.00 sec, elapsed time = 0 sec
+		 heap memory size = 17.10M bytes
+

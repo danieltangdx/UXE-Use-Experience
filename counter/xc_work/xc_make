@@ -1,0 +1,48 @@
+.NOTPARALLEL:
+XHOME	= /tools/cadence/UXE171_p98/tools.lnx86
+NCVLOG_OPTIONS	= -nowarn DLNCML -nowarn TMTPAR
+NCVHDL_OPTIONS	= -nowarn DLNCML
+NCELAB_OPTIONS	= -nowarn DLNCML -ncerror CUNOTB
+NCSIM_OPTIONS	=
+VAVLOG_OPTIONS	= -RefLib qtref 
+VAVHDL_OPTIONS	= -synth_prefix cadence 
+VAELAB_OPTIONS	= -DontStopOnError 
+IXC_CCOM	= gcc
+IXC_CPPCOM	= g++
+HM_BITS	= 64
+HM_COPT	= -O
+
+HDLVAR		= -64bit -append_log -logfile xc_work/irun.log -cdslib xc_work/cds.lib -hdlvar xc_work/hdl.var
+VAELAB_TOP	= xcva_top
+VALIB		= -logfile xc_work/va.log -valib xc_work/va.lib -F xc_work/va_reflib
+VALIB_ELAB		= -logfile xc_work/va.log -valib xc_work/va.lib -F xc_work/va_reflib_elab
+
+ncelab: ncvlog
+	/bin/rm -rf INCA_libs/irun*.nc
+	irun -elaborate $(NCELAB_OPTIONS) -f xc_work/irun.f -logfile xc_work/ncelab.log 
+
+libixcg.so: xc_work/xcdpi.c
+	$(IXC_CCOM)  -m64 -fPIC -O -shared -o xc_work/libixcg.so xc_work/xcdpi.c 2> xc_work/gcc_error.log
+
+ncvlog: xc_pkg libixcg.so
+	@/bin/rm -rf xc_work/irun.log
+	ncvlog $(HDLVAR) $(NCVLOG_OPTIONS) -WORK xc_ncwork  -f xc_work/v/ncvlog-xc_ncwork-v2001.f
+	ncvlog $(HDLVAR) $(NCVLOG_OPTIONS) -WORK xc_ncwork -sv xc_work/v/xc_top.v -incdir $(XHOME)/etc/ixcom
+
+vaelab: vavlog vaelab_only
+vaelab_only: 
+	vaelab -append_log $(VALIB_ELAB) $(VAELAB_OPTIONS) -Work xc_ncwork -UCDB -keepRtlSymbol -keepAllFlipFlop  -outputVlog xc_work/xc_va.ver $(VAELAB_TOP) 
+
+vavlog: xcva_pkg
+	vavlog $(VAVLOG_OPTIONS) -append_log $(VALIB) +ixcom -Work xc_ncwork /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/xcva_prims_pdsa.v /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/xcva_prims_ice.v xc_work/v/xcva_top.v 
+
+xc_pkg:
+	echo Compiling packages
+
+
+xcva_pkg:
+	echo Compiling packages
+
+
+siloti_pkg:
+	@echo Compiling packages

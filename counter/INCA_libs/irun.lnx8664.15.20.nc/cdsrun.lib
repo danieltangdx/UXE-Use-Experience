@@ -1,0 +1,2 @@
+include ../../xc_work/cds.lib
+define worklib ../worklib

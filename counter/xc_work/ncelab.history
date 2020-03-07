@@ -1,0 +1,7 @@
+s1(07Mar2020:14:35:51):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
+s2(07Mar2020:14:41:23):  irun -compile counter_tb.v 
+s3(07Mar2020:14:42:00):  irun -elaborate -top counter_tb -f xc_work/irun.f 
+s4(07Mar2020:14:42:15):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
+s5(07Mar2020:14:42:19):  irun -elaborate -top counter_tb -f xc_work/irun.f 
+s6(07Mar2020:14:43:18):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
+s7(07Mar2020:14:45:23):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 

@@ -1,0 +1,20 @@
+irun(64): 15.20-s072: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s072: Started on Mar 07, 2020 at 14:42:19 CST
+irun
+	-elaborate
+	-top counter_tb
+	-f xc_work/irun.f
+		-top xc_ncwork.counter_tb
+		-top xc_ncwork.xc_top
+		-cdslib xc_work/cds.lib
+		-hdlvar xc_work/hdl.var
+		-64bit
+
+   The following environmental variables have been detected. 
+   These options will be used directly by the executables and ignored by irun.
+	NCELABOPTS:  -accwarn -afile /home/tang_dx/Work/UXE-Use-Experience/counter/xc_work/ixc.af -loadpli1 libxcrt:pli_boot:export  -covfile /home/tang_dx/Work/UXE-Use-Experience/counter/xc_work/xc_top.ccf  -init_eb  -nc_delayed_update
+	NCSIMOPTS:  -loadxc libuart.so -loadxc /home/tang_dx/Work/UXE-Use-Experience/counter/xc_work/libixcg.so -sv_lib /home/tang_dx/Work/UXE-Use-Experience/counter/xc_work/libixcg.so -sv_lib /tools/cadence/UXE171_p98/tools.lnx86/lib/64bit/libxcrt.so +scgafap+off -nowarn WSEM2009 -nowarn DSEM2009  "+dut+dut"
+
+ncelab: *E,CUMULT: same design unit (xc_ncwork.counter_tb) specified more than once.
+irun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	irun(64)	15.20-s072: Exiting on Mar 07, 2020 at 14:42:19 CST  (total: 00:00:00)

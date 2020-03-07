@@ -1,0 +1,4 @@
+DEFINE xc_ncwork ./xc_cdslib/xc_ncwork
+softinclude ../uxc_cds.lib
+DEFINE AXIS ./xc_cdslib/AXIS
+DEFINE IXCOM_TEMP_LIBRARY ./xc_cdslib/IXCOM_TEMP_LIBRARY

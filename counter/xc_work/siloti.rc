@@ -1,0 +1,8 @@
+@siloti rc file Version 1.0
+[Library]
+AXIS = ./xc_work/novaslibs/AXIS
+NCUTILS = ./xc_work/novaslibs/NCUTILS
+WORK = ./xc_work/novaslibs/work
+xc_ncwork = ./xc_work/novaslibs/work
+AXIS = ./xc_work/novaslibs/AXIS
+IXCOM_TEMP_LIBRARY = ./xc_work/novaslibs/IXCOM_TEMP_LIBRARY

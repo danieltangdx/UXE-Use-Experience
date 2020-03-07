@@ -1,0 +1,3 @@
+ -cdslib xc_work/cds.lib
+ -hdlvar xc_work/hdl.var
+ -64bit

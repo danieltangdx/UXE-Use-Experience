@@ -1,0 +1,13 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-elaborate
+-nowarn
+DLNCML
+-ncerror
+CUNOTB
+-f
+xc_work/irun.f
+-logfile
+xc_work/ncelab.log

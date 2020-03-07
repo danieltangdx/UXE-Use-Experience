@@ -1,0 +1,16 @@
+DEFINE NCVLOGOPTS
+DEFINE NCELABOPTS
+DEFINE NCSIMOPTS
+DEFINE NCSIMRC
+DEFINE VIEW_MAP (.v => module, .sv => module, .v95 => module)
+DEFINE WORK xc_ncwork
+DEFINE XHOME /tools/cadence/UXE171_p98/tools.lnx86
+DEFINE IXC_DIR /home/tang_dx/Work/UXE-Use-Experience/counter
+softinclude ../uxc_hdl.var
+DEFINE NCVLOGOPTS $NCVLOGOPTS 
+DEFINE NCELABOPTS $NCELABOPTS -accwarn -afile $IXC_DIR/xc_work/ixc.af -loadpli1 libxcrt:pli_boot:export  -covfile $IXC_DIR/xc_work/xc_top.ccf  -init_eb  -nc_delayed_update
+DEFINE NCSIMOPTS $NCSIMOPTS 
+DEFINE NCSIMOPTS $NCSIMOPTS -loadxc libuart.so -loadxc $IXC_DIR/xc_work/libixcg.so -sv_lib $IXC_DIR/xc_work/libixcg.so -sv_lib $XHOME/lib/64bit/libxcrt.so
+DEFINE NCSIMOPTS $NCSIMOPTS +scgafap+off -nowarn WSEM2009 -nowarn DSEM2009
+DEFINE NCSIMOPTS $NCSIMOPTS  "+dut+dut-top"
+DEFINE NCSIMRC $NCSIMRC $XHOME/etc/ixcom/xc.tcl

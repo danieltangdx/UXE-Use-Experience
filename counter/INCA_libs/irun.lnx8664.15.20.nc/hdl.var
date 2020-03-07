@@ -1,0 +1,5 @@
+include ./hdlrun.var
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ( + => xc_ncwork )
+define ELAB_SNAPSHOT
+define SNAPSHOT xc_ncwork.counter_tb:module

@@ -1,0 +1,4 @@
+DEFINE xc_ncwork ./xc_work/xc_vawork/xc_vawork
+ DEFINE WORK ./xc_work/xc_vawork/xc_vawork
+DEFINE AXIS ./xc_work/xc_vawork/AXIS
+DEFINE IXCOM_TEMP_LIBRARY ./xc_work/xc_vawork/IXCOM_TEMP_LIBRARY

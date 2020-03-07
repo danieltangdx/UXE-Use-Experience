@@ -1,0 +1,2 @@
+include /tools/cadence/UXE171_p98/tools.lnx86/packages/libmaprc
+WORK => ./AxisWork/WORK

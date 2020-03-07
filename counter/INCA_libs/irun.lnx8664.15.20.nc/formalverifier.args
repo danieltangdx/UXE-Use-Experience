@@ -1,0 +1,12 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-NOWARN
+DLNCML
+-NCERROR
+CUNOTB
++TOP_INTERNAL+xc_ncwork.counter_tb
++TOP_INTERNAL+xc_ncwork.xc_top
+-64bit
+-MESSAGES

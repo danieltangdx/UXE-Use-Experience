@@ -1,0 +1,50 @@
+echo Compiling packages
+Compiling packages
+gcc  -m64 -fPIC -O -shared -o xc_work/libixcg.so xc_work/xcdpi.c 2> xc_work/gcc_error.log
+ncvlog -64bit -append_log -logfile xc_work/irun.log -cdslib xc_work/cds.lib -hdlvar xc_work/hdl.var -nowarn DLNCML -nowarn TMTPAR -WORK xc_ncwork  -f xc_work/v/ncvlog-xc_ncwork-v2001.f
+ncvlog(64): 15.20-s072: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+ncvlog -64bit -append_log -logfile xc_work/irun.log -cdslib xc_work/cds.lib -hdlvar xc_work/hdl.var -nowarn DLNCML -nowarn TMTPAR -WORK xc_ncwork -sv xc_work/v/xc_top.v -incdir /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom
+ncvlog(64): 15.20-s072: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+/bin/rm -rf INCA_libs/irun*.nc
+irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
+irun(64): 15.20-s072: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+	Elaborating the design hierarchy:
+		Caching library 'xc_ncwork' ....... Done
+	Top level design units:
+		counter_tb
+		xc_top
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		xc_ncwork.counter:module <0x0605c05f>
+			streams:   2, words:   642
+		xc_ncwork.counter_tb:module <0x4215cd2e>
+			streams:   4, words:  2740
+		xc_ncwork.xc_comptbx:module <0x02ccdcda>
+			streams:   1, words:  1105
+		xc_ncwork.xc_sch_eval:module <0x61484815>
+			streams:   1, words:  1117
+		xc_ncwork.xc_swapin:module <0x2599183c>
+			streams:   1, words:  1381
+		xc_ncwork.xc_top:module <0x0a929adf>
+			streams:  67, words: 74412
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     3       3
+		Programs:                    5       3
+		Registers:                 334      73
+		Scalar wires:               17       -
+		Vectored wires:              1       -
+		Named events:               15      16
+		Always blocks:              19      19
+		Initial blocks:             20      18
+		Final blocks:                1       1
+		Parallel blocks:             2       2
+		Cont. assignments:           0       5
+		Pseudo assignments:          7       7
+		SV Class declarations:       1       1
+		SV Class specializations:    1       1
+		Simulation timescale:      1ns
+	Writing initial simulation snapshot: xc_ncwork.counter_tb:module

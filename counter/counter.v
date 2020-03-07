@@ -21,9 +21,10 @@
 module counter(clk, out);
 	input clk;
 	output [31:0] out;
-	reg [31:0] counter = 32’b0;
+	reg [31:0] counter = 32'b0;
 	assign out = counter;
+	
 	always @(posedge clk) begin
-	counter = counter + 1;
+		counter = counter + 1;
 	end
 endmodule
