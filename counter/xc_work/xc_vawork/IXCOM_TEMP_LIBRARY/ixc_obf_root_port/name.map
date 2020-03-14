@@ -1,0 +1,5 @@
+DUMMY0 1xc_top.IXC_GFIFO.O.GFcbid 19 0
+DUMMY1 1xc_top.IXC_GFIFO.O.GFlen 11 0
+DUMMY2 1xc_top.IXC_GFIFO.O.GFidata 511 0
+DUMMY3 0xc_top.GFlock
+DUMMY4 0enD

@@ -1,0 +1,4 @@
+module ixc_pulse_en ixc_pulse_en 0 3
+p p
+s s
+en en

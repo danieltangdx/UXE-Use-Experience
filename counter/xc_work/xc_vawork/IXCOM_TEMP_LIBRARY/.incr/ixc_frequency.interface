@@ -1,0 +1,6 @@
+module ixc_frequency ixc_frequency 3 2
+FREQ FREQ
+BFREQ BFREQ
+TYPE DUMMY0
+clk clk
+clkBase clkBase

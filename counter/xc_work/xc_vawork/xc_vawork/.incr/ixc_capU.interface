@@ -1,0 +1,10 @@
+module ixc_capU ixc_capU 3 6
+RTL RTL
+ASYNC ASYNC
+NO_CAP NO_CAP
+cap cap
+ev ev
+en en
+rst rst
+xpsn xpsn
+xpen xpen

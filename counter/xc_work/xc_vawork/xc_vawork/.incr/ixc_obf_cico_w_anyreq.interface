@@ -1,0 +1,8 @@
+module ixc_obf_cico_w_anyreq ixc_obf_cico_w_anyreq 4 3
+N N
+G G
+M M
+R R
+ci ci
+co co
+anyReq anyReq

@@ -1,0 +1,6 @@
+
+module IXC_MC_GSFIFO;
+//pragma CVASTRPROP MODULE SKELETON "0.000000"
+IXC_MC_OFIFO O ();
+IXC_MC_IFIFO I ();
+endmodule

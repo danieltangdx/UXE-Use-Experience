@@ -1,0 +1,24 @@
+module ixc_obf_mc_port ixc_obf_mc_port 8 15
+DW DW
+SHARE SHARE
+USETIME USETIME
+BUFL BUFL
+BW BW
+XW XW
+SEL1 SEL1
+LBADW LBADW
+tkout tkout
+tkin tkin
+ireq ireq
+cbid cbid
+len len
+idata idata
+CGFtsReq CGFtsReq
+CGFcbid CGFcbid
+CGFlen CGFlen
+CGFidata CGFidata
+CGLBreq CGLBreq
+CLBrd CLBrd
+CLBwr CLBwr
+CLBfull CLBfull
+CGFfull CGFfull

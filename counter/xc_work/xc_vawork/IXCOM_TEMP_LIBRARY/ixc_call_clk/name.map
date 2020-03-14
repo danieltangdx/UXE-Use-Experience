@@ -1,0 +1,4 @@
+DUMMY0 0xc_top.hotSwapOnPI
+DUMMY1 0xc_top.callEmuPre
+DUMMY2 0xc_top.s2hCallClk
+DUMMY3 0xc_top.eventOn

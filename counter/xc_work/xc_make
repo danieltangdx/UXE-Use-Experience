@@ -22,7 +22,7 @@ ncelab: ncvlog
 	irun -elaborate $(NCELAB_OPTIONS) -f xc_work/irun.f -logfile xc_work/ncelab.log 
 
 libixcg.so: xc_work/xcdpi.c
-	$(IXC_CCOM)  -m64 -fPIC -O -shared -o xc_work/libixcg.so xc_work/xcdpi.c 2> xc_work/gcc_error.log
+	$(IXC_CCOM)  -m64 -fPIC -O -shared -o xc_work/libixcg.so xc_work/xcdpi.c -I`ncroot`/tools/include 2> xc_work/gcc_error.log
 
 ncvlog: xc_pkg libixcg.so
 	@/bin/rm -rf xc_work/irun.log

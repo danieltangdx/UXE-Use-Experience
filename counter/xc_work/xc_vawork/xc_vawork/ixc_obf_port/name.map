@@ -1,0 +1,25 @@
+DUMMY0 0xcva_top.IXC_GFIFO.O.GFtsReq
+DUMMY1 1xcva_top.IXC_GFIFO.O.GFcbid 19 0
+DUMMY2 1xcva_top.IXC_GFIFO.O.GFlen 11 0
+DUMMY3 1xcva_top.IXC_GFIFO.O.GFidata 511 0
+DUMMY4 0xcva_top.IXC_GFIFO.O.GLBreq
+DUMMY5 0xcva_top.IXC_GFIFO.O.LBrd
+DUMMY6 0xcva_top.IXC_GFIFO.O.LBwr
+DUMMY7 0xcva_top.IXC_GFIFO.O.LBfull
+DUMMY8 0xcva_top.IXC_GFIFO.O.GFfull
+DUMMY9 0xc_top.GFlock
+DUMMY11 0genblk1
+DUMMY13 3oreq *  odata *
+DUMMY14 0genblk2
+DUMMY16 3oreq *  odata *  olen *
+DUMMY17 0genblk2
+DUMMY19 3oreq *  odata *  ocbid *
+DUMMY20 0genblk2
+DUMMY22 3oreq *  odata *  ocbid *  olen *
+xdata_DUMMY0 0xdata
+xlen_DUMMY1 0xlen
+sel_DUMMY2 0sel
+_zzLB_DUMMY3 0_zzLB
+_zzLB_DUMMY4 0_zzLB
+_zzLB_DUMMY5 0_zzLB
+_zzLB_DUMMY6 0_zzLB

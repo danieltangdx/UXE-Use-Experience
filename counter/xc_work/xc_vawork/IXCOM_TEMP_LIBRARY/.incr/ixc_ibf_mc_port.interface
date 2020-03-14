@@ -1,0 +1,21 @@
+module ixc_ibf_mc_port ixc_ibf_mc_port 9 11
+IARGW IARGW
+OARGW OARGW
+IARGW1 IARGW1
+OARGW1 OARGW1
+IARGPL IARGPL
+IARGPL1 IARGPL1
+OARGPL OARGPL
+OARGPL1 OARGPL1
+OFWLEN OFWLEN
+call call
+iarg iarg
+ret ret
+oarg oarg
+tid tid
+fen fen
+CiData CiData
+CtId CtId
+CoData CoData
+CoDataEn CoDataEn
+CoDataLen CoDataLen

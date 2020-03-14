@@ -1,3 +1,4 @@
+ counter.v 
  counter_tb.v 
  -singleStepCompileMode 
  -libmaprc ./AxisWork/ssc.libmaprc 

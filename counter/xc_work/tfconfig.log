@@ -1,0 +1,6 @@
+== MODULE IXC_MC_OFIFO (id: 10, file: /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/GFIFO.sv) ==
+              SCOPE    GFIFO/ICTD   AUTO MEM PIO TBC T P PTS  LINE  ARGW  CTXW
+              -----    ----------   ---- --- --- --- - ----  ----  ----  ----
+        gfifo_flush(F)  TB_IMPORT   AUTO MEM           1      3349     0     0
+        gfifo_final(F)  TB_IMPORT   AUTO MEM           1      3350     0     0
+

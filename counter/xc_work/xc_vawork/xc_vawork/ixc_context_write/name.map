@@ -1,0 +1,7 @@
+DUMMY0 0xc_top.callEmu
+DUMMY1 0xc_top.callEmuPre
+DUMMY2 0xc_top.hotSwapOnPI
+DUMMY4 0{}
+DUMMY5 0{}
+DUMMY6 0{}
+DUMMY7 0genblk2

@@ -1,0 +1,4 @@
+
+module Q_RBUFZN;
+//pragma CVASTRPROP MODULE SKELETON "1.000000"
+endmodule

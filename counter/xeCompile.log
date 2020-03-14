@@ -1,0 +1,434 @@
+XEC> #
+XEC> # Backend compiler script for ixcom 
+XEC> #
+XEC> 
+XEC> # Source custom compile script from user if specified
+XEC> set compileQel "xc_work/qel/compile.qel"
+xc_work/qel/compile.qel
+XEC> if { [file exists $compileQel] } {
+    source $compileQel
+    exit
+} else {
+    if {[file exists compile.qel]} {
+	source compile.qel
+	exit
+    }
+}
+XEC> 
+XEC> source [file join $env(QTHOME) etc qel ixcom_util.qel]
+XEC> 
+XEC> set skipImportScript "xc_work/qel/skipImport.qel"
+xc_work/qel/skipImport.qel
+XEC> # Skip import if skipImportScript exists
+XEC> if { [file exists $skipImportScript] != 1} {
+    set importScript "xc_work/qel/import.qel"
+    if { [file exists $importScript] } {
+        source $importScript
+    } else {
+	if {[file exists xc_work/nl/refLib.qel]} {
+	    # External netlist compile, source reference library list
+	    source xc_work/nl/refLib.qel
+	} else {
+	    if {[file exists refLib.qel]} {
+		source refLib.qel
+	    } else {
+		refLib qtref generic
+	    }
+	}
+	
+	# design -rm
+	importOption {mode full}
+	importOption {special DELETE_LIBS_ON_FULL}
+	importOption {library hdldb}
+	importOption {V1995 ON}
+	if {[file exists xc_work/nl/import.qel]} {
+	    # External netlist compile, source IXCOM created import script
+	    source xc_work/nl/import.qel
+	} else {
+	    importOption {IXCOM_RTL ON}
+	    netlistFile {verilog xc_work/xc_va.ver}
+	    set externalNetlistsQel "xc_work/qel/externalNetlists.qel"
+	    if {[file exists $externalNetlistsQel]} {
+		source $externalNetlistsQel
+	    } else {
+		if {[file exists externalNetlists.qel]} {
+		    source externalNetlists.qel
+		}
+	    }
+	}
+
+        set gfifoSynthBypassQel "xc_work/qel/gfifo_synth_bypass.qel"
+        if { [file exists $gfifoSynthBypassQel] } {
+            # Compile gfifo related logic that has been bypassed around hdlice.
+            source $gfifoSynthBypassQel
+        }
+
+        set scgGfifoSynthBypassQel "xc_work/qel/scg_gfifo_synth_bypass.qel"
+        if { [file exists $scgGfifoSynthBypassQel] } {
+            # Compile scg-gfifo related logic that has been bypassed around hdlice.
+            source $scgGfifoSynthBypassQel
+        }
+
+        set sfifoSynthBypassQel "xc_work/qel/sfifo_synth_bypass.qel"
+        if { [file exists $sfifoSynthBypassQel] } {
+            # Compile sfifo related logic that has been bypassed around hdlice.
+            source $sfifoSynthBypassQel
+        }
+
+        set ifSynSynthBypassQel "xc_work/qel/ifsyn_synth_bypass.qel"
+        if { [file exists $ifSynSynthBypassQel] } {
+            # Compile ifsyn related logic that has been bypassed around hdlice.
+            source $ifSynSynthBypassQel
+        }
+
+	designImport
+
+	set postImportScript "xc_work/qel/postImport.qel"
+	if { [file exists $postImportScript] } {
+	    source $postImportScript
+	}
+    }
+}
+import - UXE, V17.1.0.p98
+INFO (import-1038): Processing import control information from file .xeimp.dil.
+INFO (import-1228): Name scope processing is not needed.
+INFO (import-1022): Accessing netlist file xc_work/xc_va.ver to create components and terminals.
+INFO (import-1022): Accessing netlist file xc_work/xc_va.ver to create instances and nets.
+INFO (import-1028): Library hdldb, cell IXC_OSF1 contains no instances.
+INFO (import-1028): Library hdldb, cell IXC_OSF contains no instances.
+INFO (import-1028): Library hdldb, cell _ixc_isc contains no instances.
+INFO (import-1028): Library hdldb, cell IXC_ISF contains no instances.
+INFO (mcp-1603): No new memory definition detected by automatic memory detection.
+INFO (import-1246): Netlist File xc_work/xc_va.ver (VERILOG) Summary:
+     Lines parsed: 2323
+     Cells created: 22
+     Cells deleted: 0
+     Cells compared: 0
+     Terminals created: 258
+     Terminals deleted: 0
+     Instances created: 1831
+     Instances deleted: 0
+     Nets created: 22029
+     Nets deleted: 0
+     Connections created: 3674
+     Connections deleted: 0
+INFO (import-1245): Import Summary:
+     Lines parsed: 2323
+     Cells created: 22
+     Cells deleted: 0
+     Cells compared: 0
+     Terminals created: 258
+     Terminals deleted: 0
+     Instances created: 1831
+     Instances deleted: 0
+     Nets created: 22029
+     Nets deleted: 0
+     Connections created: 3674
+     Connections deleted: 0
+INFO (import-1054): exit SUCCESS.
+INFO (legacy-11003): import FINISHED SUCCESSFULLY
+XEC> 
+XEC> set importOnly "xc_work/qel/importOnly.qel"
+xc_work/qel/importOnly.qel
+XEC>    if { [file exists $importOnly] == 1 } {
+        exit
+}
+XEC> 
+XEC> design hdldb xcva_top
+Import library "hdldb"
+Import library "qtref"
+QTDB Library "qtref" has been imported successfully
+QTDB Library "hdldb" has been imported successfully
+hdldb xcva_top
+XEC> 
+XEC> memoryTransform -add {* SHALLOW off }
+XEC> compilerOption -add {mode ice}
+XEC> precompileOption -add {keepEmptyCells}
+XEC> precompileOption -add {breakECMloops}
+XEC> precompileOption -add dontMergeCommon
+XEC> probeInternalNet -add xc_top.sdlEnable xc_top.tbcEnable xc_top.sdlHaltHwClk xc_top.hwClkDbg xc_top.hwClkDbgTime xc_top.hwClkEnable
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+XEC> set compileScript "compile -names_crit"
+compile -names_crit
+XEC> set postCompileScript ""
+XEC> 
+XEC> handleBackendArgs $argc $argv
+XEC> 
+XEC> set defaultConfg [ file join $env(QTHOME) etc et3 ua_default.et3confg ]
+/tools/cadence/UXE171_p98/tools.lnx86/etc/et3/ua_default.et3confg
+XEC> emulatorConfiguration -add "file $defaultConfg" "boards 0.1"
+/bin/cp -f /tools/cadence/UXE171_p98/tools.lnx86/etc/et3/ua_default.et3confg dbFiles/xcva_top.et3confg
+XEC> 
+XEC> if {[file exists xc_work/nl/hot-swap.qel]} {
+    source xc_work/nl/hot-swap.qel
+}
+XEC> 
+XEC> # Source compiler options script from user if specified
+XEC> set compilerOptionsQel "xc_work/qel/compilerOptions.qel"
+xc_work/qel/compilerOptions.qel
+XEC> if { [file exists $compilerOptionsQel] } {
+    source $compilerOptionsQel
+} else {
+    if {[file exists compilerOptions.qel]} {
+	source compilerOptions.qel
+    }
+}
+XEC> 
+XEC> if {[info exists env(XE_DYNP)]} {
+    compilerOption -add {visionMode DYNP}
+} elseif {[info exists env(UXE_DYNP)]} {
+    compilerOption -add {visionMode DYNP}
+}
+XEC> 
+XEC> 
+XEC> if {[info exists env(XE_MINSTEP)]} {
+  eval "compilerOption -add {minStep $env(XE_MINSTEP)}"
+} elseif  {[info exists env(UXE_MINSTEP)]} {
+  eval "compilerOption -add {minStep $env(UXE_MINSTEP)}"
+}
+XEC> 
+XEC> 
+XEC> checkEnvForHostSetup
+Environment variables found for emulator configuration.
+emulatorConfiguration -add {host /tools/cadence/UXE171_p98/tools.lnx86} {boards 0.0}
+WARNING (legacy-0): Can't resolve remote hostname 
+/usr/bin/rcp /tools/cadence/UXE171_p98/tools.lnx86:/et3mach//tools/cadence/UXE171_p98/tools.lnx86.et3confg dbFiles/xcva_top.et3confg
+ERROR (legacy-49382): Cannot copy '/tools/cadence/UXE171_p98/tools.lnx86:/et3mach//tools/cadence/UXE171_p98/tools.lnx86.et3confg': ÿÿ.
+ERROR (legacy-43702): Failed to add emulator configuration.
+
+    while executing
+"emulatorConfiguration -add {host /tools/cadence/UXE171_p98/tools.lnx86} {boards 0.0}"
+    ("eval" body line 1)
+    invoked from within
+"eval $cfgcmd "
+    (procedure "checkEnvForHostSetup" line 35)
+    invoked from within
+"checkEnvForHostSetup"
+    (file "/tools/cadence/UXE171_p98/tools.lnx86/etc/qel/ixcom.qel" line 140)
+XEC> #
+XEC> # Backend compiler script for ixcom 
+XEC> #
+XEC> 
+XEC> # Source custom compile script from user if specified
+XEC> set compileQel "xc_work/qel/compile.qel"
+xc_work/qel/compile.qel
+XEC> if { [file exists $compileQel] } {
+    source $compileQel
+    exit
+} else {
+    if {[file exists compile.qel]} {
+	source compile.qel
+	exit
+    }
+}
+XEC> 
+XEC> source [file join $env(QTHOME) etc qel ixcom_util.qel]
+XEC> 
+XEC> set skipImportScript "xc_work/qel/skipImport.qel"
+xc_work/qel/skipImport.qel
+XEC> # Skip import if skipImportScript exists
+XEC> if { [file exists $skipImportScript] != 1} {
+    set importScript "xc_work/qel/import.qel"
+    if { [file exists $importScript] } {
+        source $importScript
+    } else {
+	if {[file exists xc_work/nl/refLib.qel]} {
+	    # External netlist compile, source reference library list
+	    source xc_work/nl/refLib.qel
+	} else {
+	    if {[file exists refLib.qel]} {
+		source refLib.qel
+	    } else {
+		refLib qtref generic
+	    }
+	}
+	
+	# design -rm
+	importOption {mode full}
+	importOption {special DELETE_LIBS_ON_FULL}
+	importOption {library hdldb}
+	importOption {V1995 ON}
+	if {[file exists xc_work/nl/import.qel]} {
+	    # External netlist compile, source IXCOM created import script
+	    source xc_work/nl/import.qel
+	} else {
+	    importOption {IXCOM_RTL ON}
+	    netlistFile {verilog xc_work/xc_va.ver}
+	    set externalNetlistsQel "xc_work/qel/externalNetlists.qel"
+	    if {[file exists $externalNetlistsQel]} {
+		source $externalNetlistsQel
+	    } else {
+		if {[file exists externalNetlists.qel]} {
+		    source externalNetlists.qel
+		}
+	    }
+	}
+
+        set gfifoSynthBypassQel "xc_work/qel/gfifo_synth_bypass.qel"
+        if { [file exists $gfifoSynthBypassQel] } {
+            # Compile gfifo related logic that has been bypassed around hdlice.
+            source $gfifoSynthBypassQel
+        }
+
+        set scgGfifoSynthBypassQel "xc_work/qel/scg_gfifo_synth_bypass.qel"
+        if { [file exists $scgGfifoSynthBypassQel] } {
+            # Compile scg-gfifo related logic that has been bypassed around hdlice.
+            source $scgGfifoSynthBypassQel
+        }
+
+        set sfifoSynthBypassQel "xc_work/qel/sfifo_synth_bypass.qel"
+        if { [file exists $sfifoSynthBypassQel] } {
+            # Compile sfifo related logic that has been bypassed around hdlice.
+            source $sfifoSynthBypassQel
+        }
+
+        set ifSynSynthBypassQel "xc_work/qel/ifsyn_synth_bypass.qel"
+        if { [file exists $ifSynSynthBypassQel] } {
+            # Compile ifsyn related logic that has been bypassed around hdlice.
+            source $ifSynSynthBypassQel
+        }
+
+	designImport
+
+	set postImportScript "xc_work/qel/postImport.qel"
+	if { [file exists $postImportScript] } {
+	    source $postImportScript
+	}
+    }
+}
+import - UXE, V17.1.0.p98
+INFO (import-1038): Processing import control information from file .xeimp.dil.
+INFO (import-1228): Name scope processing is not needed.
+INFO (import-1022): Accessing netlist file xc_work/xc_va.ver to create components and terminals.
+INFO (import-1022): Accessing netlist file xc_work/xc_va.ver to create instances and nets.
+INFO (import-1028): Library hdldb, cell IXC_ISF contains no instances.
+INFO (import-1028): Library hdldb, cell IXC_OSF1 contains no instances.
+INFO (import-1028): Library hdldb, cell _ixc_isc contains no instances.
+INFO (import-1028): Library hdldb, cell IXC_OSF contains no instances.
+INFO (mcp-1603): No new memory definition detected by automatic memory detection.
+INFO (import-1246): Netlist File xc_work/xc_va.ver (VERILOG) Summary:
+     Lines parsed: 2323
+     Cells created: 22
+     Cells deleted: 0
+     Cells compared: 0
+     Terminals created: 258
+     Terminals deleted: 0
+     Instances created: 1831
+     Instances deleted: 0
+     Nets created: 22029
+     Nets deleted: 0
+     Connections created: 3674
+     Connections deleted: 0
+INFO (import-1245): Import Summary:
+     Lines parsed: 2323
+     Cells created: 22
+     Cells deleted: 0
+     Cells compared: 0
+     Terminals created: 258
+     Terminals deleted: 0
+     Instances created: 1831
+     Instances deleted: 0
+     Nets created: 22029
+     Nets deleted: 0
+     Connections created: 3674
+     Connections deleted: 0
+INFO (import-1054): exit SUCCESS.
+INFO (legacy-11003): import FINISHED SUCCESSFULLY
+XEC> 
+XEC> set importOnly "xc_work/qel/importOnly.qel"
+xc_work/qel/importOnly.qel
+XEC>    if { [file exists $importOnly] == 1 } {
+        exit
+}
+XEC> 
+XEC> design hdldb xcva_top
+Import library "hdldb"
+Import library "qtref"
+QTDB Library "qtref" has been imported successfully
+QTDB Library "hdldb" has been imported successfully
+hdldb xcva_top
+XEC> 
+XEC> memoryTransform -add {* SHALLOW off }
+INFO (legacy-22706): '* shallow off' of 'memoryTransform' is already in the DB.
+XEC> compilerOption -add {mode ice}
+XEC> precompileOption -add {keepEmptyCells}
+INFO (legacy-47291): Precompile option keepEmptyCells is already in the DB.
+XEC> precompileOption -add {breakECMloops}
+INFO (legacy-47291): Precompile option breakECMloops is already in the DB.
+XEC> precompileOption -add dontMergeCommon
+INFO (legacy-47291): Precompile option dontMergeCommon is already in the DB.
+XEC> probeInternalNet -add xc_top.sdlEnable xc_top.tbcEnable xc_top.sdlHaltHwClk xc_top.hwClkDbg xc_top.hwClkDbgTime xc_top.hwClkEnable
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+INFO (legacy-42185): probeInternalNet name xc_top.sdlEnable is already in the DB.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+INFO (legacy-42185): probeInternalNet name xc_top.tbcEnable is already in the DB.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+INFO (legacy-42185): probeInternalNet name xc_top.sdlHaltHwClk is already in the DB.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+INFO (legacy-42185): probeInternalNet name xc_top.hwClkDbg is already in the DB.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+INFO (legacy-42185): probeInternalNet name xc_top.hwClkDbgTime is already in the DB.
+WARNING (legacy-49196): Run 'emulatorConfiguration' command first.
+INFO (legacy-42185): probeInternalNet name xc_top.hwClkEnable is already in the DB.
+XEC> set compileScript "compile -names_crit"
+compile -names_crit
+XEC> set postCompileScript ""
+XEC> 
+XEC> handleBackendArgs $argc $argv
+XEC> 
+XEC> set defaultConfg [ file join $env(QTHOME) etc et3 ua_default.et3confg ]
+/tools/cadence/UXE171_p98/tools.lnx86/etc/et3/ua_default.et3confg
+XEC> emulatorConfiguration -add "file $defaultConfg" "boards 0.1"
+/bin/cp -f /tools/cadence/UXE171_p98/tools.lnx86/etc/et3/ua_default.et3confg dbFiles/xcva_top.et3confg
+XEC> 
+XEC> if {[file exists xc_work/nl/hot-swap.qel]} {
+    source xc_work/nl/hot-swap.qel
+}
+XEC> 
+XEC> # Source compiler options script from user if specified
+XEC> set compilerOptionsQel "xc_work/qel/compilerOptions.qel"
+xc_work/qel/compilerOptions.qel
+XEC> if { [file exists $compilerOptionsQel] } {
+    source $compilerOptionsQel
+} else {
+    if {[file exists compilerOptions.qel]} {
+	source compilerOptions.qel
+    }
+}
+XEC> 
+XEC> if {[info exists env(XE_DYNP)]} {
+    compilerOption -add {visionMode DYNP}
+} elseif {[info exists env(UXE_DYNP)]} {
+    compilerOption -add {visionMode DYNP}
+}
+XEC> 
+XEC> 
+XEC> if {[info exists env(XE_MINSTEP)]} {
+  eval "compilerOption -add {minStep $env(XE_MINSTEP)}"
+} elseif  {[info exists env(UXE_MINSTEP)]} {
+  eval "compilerOption -add {minStep $env(UXE_MINSTEP)}"
+}
+XEC> 
+XEC> 
+XEC> checkEnvForHostSetup
+Environment variables found for emulator configuration.
+emulatorConfiguration -add {host /tools/cadence/UXE171_p98/tools.lnx86} {boards 0.0}
+WARNING (legacy-0): Can't resolve remote hostname 
+/usr/bin/rcp /tools/cadence/UXE171_p98/tools.lnx86:/et3mach//tools/cadence/UXE171_p98/tools.lnx86.et3confg dbFiles/xcva_top.et3confg
+ERROR (legacy-49382): Cannot copy '/tools/cadence/UXE171_p98/tools.lnx86:/et3mach//tools/cadence/UXE171_p98/tools.lnx86.et3confg': ÿÿ.
+ERROR (legacy-43702): Failed to add emulator configuration.
+
+    while executing
+"emulatorConfiguration -add {host /tools/cadence/UXE171_p98/tools.lnx86} {boards 0.0}"
+    ("eval" body line 1)
+    invoked from within
+"eval $cfgcmd "
+    (procedure "checkEnvForHostSetup" line 35)
+    invoked from within
+"checkEnvForHostSetup"
+    (file "/tools/cadence/UXE171_p98/tools.lnx86/etc/qel/ixcom.qel" line 140)

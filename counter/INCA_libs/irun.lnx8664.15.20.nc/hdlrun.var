@@ -1,4 +1,3 @@
-include ../../xc_work/hdl.var
 DEFINE LANG_MAP (\
 	.v => verilog,\
 	.vp => verilog,\
@@ -62,11 +61,13 @@ DEFINE LANG_MAP (\
 	DEF => unknown\
 )
 define VIEW_MAP ( $VIEW_MAP \
+, .v => v \
 , .vp => vp \
 , .vs => vs \
 , .V => V \
 , .VP => VP \
 , .VS => VS \
+, .sv => sv \
 , .svp => svp \
 , .SV => SV \
 , .SVP => SVP \
@@ -81,3 +82,5 @@ define VIEW_MAP ( $VIEW_MAP \
 , .svms => svms \
 , .SVMS => SVMS \
 )
+define ELAB_SNAPSHOT
+define SNAPSHOT xc_ncwork.counter_tb:module

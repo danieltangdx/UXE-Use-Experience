@@ -2,7 +2,7 @@
 // File created by:  irun
 // Do not modify this file
 //
+-ACCESS
++rwc
 
-xc_ncwork.counter_tb
-
-xc_ncwork.xc_top
+counter_tb

@@ -1,0 +1,16 @@
+module ixc_ibf_port ixc_ibf_port 9 6
+IARGW IARGW
+OARGW OARGW
+IARGW1 IARGW1
+OARGW1 OARGW1
+IARGPL IARGPL
+IARGPL1 IARGPL1
+OARGPL OARGPL
+OARGPL1 OARGPL1
+OFWLEN OFWLEN
+call call
+iarg iarg
+ret ret
+oarg oarg
+tid tid
+fen fen

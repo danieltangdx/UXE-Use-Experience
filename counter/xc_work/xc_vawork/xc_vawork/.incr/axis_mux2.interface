@@ -1,0 +1,5 @@
+module axis_mux2 axis_mux2 0 4
+out DUMMY0
+sel sel
+in1 in1
+in2 in2

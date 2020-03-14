@@ -1,0 +1,18 @@
+module ixc_pio_call ixc_pio_call 9 8
+S2HDW S2HDW
+H2SDW H2SDW
+MAIDW MAIDW
+LTIDW LTIDW
+ISSVA ISSVA
+S2HDW1 S2HDW1
+H2SDW1 H2SDW1
+MAIDW1 MAIDW1
+LTIDW1 LTIDW1
+s2h_notify s2h_notify
+s2h_data s2h_data
+from_isf from_isf
+h2s_notify h2s_notify
+h2s_data h2s_data
+to_osf to_osf
+maid maid
+ltid ltid

@@ -1,0 +1,3 @@
+module ixc_2xbuf ixc_2xbuf 0 2
+cout cout
+cin cin

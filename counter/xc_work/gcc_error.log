@@ -1,0 +1,5 @@
+In file included from /home/tools/cadence/INCISIVE152072/tools/include/svdpi.h:80,
+                 from xc_work/c/sfcall.h:7,
+                 from xc_work/c/sfcall.c:3,
+                 from xc_work/xcdpi.c:7:
+/home/tools/cadence/INCISIVE152072/tools/include/svdpi_compatibility.h:48:2: warning: #warning "INCISIV is currently compliant with DPI header file svdpi.h as per IEEE 1800-2005. Starting IUS16.10, the default header file will be as per IEEE 1800-2012. DPI applications which need to continue complying with IEEE 1800-2005 will need to compile with the macro DPI_COMPATIBILITY_VERSION_1800v2005 starting in 16.1. The difference in the two header files is in the declaration of the struct t_vpi_vecval."

@@ -1,5 +1,22 @@
-s1(07Mar2020:14:35:51):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
-s2(07Mar2020:14:41:23):  irun -compile counter_tb.v 
-s3(07Mar2020:14:42:00):  irun -elaborate -top counter_tb -f xc_work/irun.f 
-s4(07Mar2020:14:42:15):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
-s5(07Mar2020:14:42:19):  irun -elaborate -top counter_tb -f xc_work/irun.f 
+s1(07Mar2020:16:46:01):  irun -64bit -c -sv -f xc_work/irun.f -vtimescale 1ps/100fs -uvm -access +rwc -nowarn CUVIHR -top counter_tb 
+s2(07Mar2020:16:48:53):  irun -64bit -c -sv -f xc_work/irun.f -vtimescale 1ps/100fs -uvm +incdir+./ -access +rwc -nowarn CUVIHR -top counter_tb 
+s3(07Mar2020:16:50:52):  irun -64bit -c -sv -f xc_work/irun.f -vtimescale 1ps/100fs -uvm 
+s4(07Mar2020:16:51:48):  irun -64bit -c -sv -f xc_work/irun.f -vtimescale 1ps/100fs -uvm -top counter_tb 
+s5(07Mar2020:16:52:13):  irun -64bit -c -sv -f xc_work/irun.f -vtimescale 1ps/100fs -uvm -top counter_tb 
+s6(07Mar2020:16:52:46):  irun -64bit -c -f xc_work/irun.f -vtimescale 1ps/100fs -top counter_tb 
+s7(07Mar2020:16:53:21):  irun counter_tb.v 
+s8(07Mar2020:16:54:37):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
+s9(07Mar2020:16:54:41):  irun counter_tb.v 
+s10(07Mar2020:16:54:49):  irun -elaborate -nowarn DLNCML -ncerror CUNOTB -f xc_work/irun.f -logfile xc_work/ncelab.log 
+s11(07Mar2020:16:54:52):  irun counter_tb.v 
+s12(07Mar2020:16:55:43):  irun [options] files 
+s13(07Mar2020:16:57:02):  irun -to counter_tb.v 
+s14(07Mar2020:16:57:07):  irun -to counter_tb 
+s15(07Mar2020:16:57:10):  irun -top counter_tb 
+s16(07Mar2020:16:58:40):  irun -top counter_tb 
+s17(07Mar2020:16:59:07):  irun -top counter_tb -nowarn CUVIHR 
+s18(07Mar2020:16:59:32):  irun -nowarn CUVIHR -top counter_tb 
+s19(07Mar2020:16:59:40):  irun -nowarn CUVIHR -top counter_tb 
+s20(07Mar2020:17:00:13):  irun -access + rwc -nowarn CUVIHR -top counter_tb 
+s21(07Mar2020:17:00:32):  irun -access +rwc -nowarn CUVIHR -top counter_tb 
+s22(07Mar2020:17:00:45):  irun -c -access +rwc -nowarn CUVIHR -top counter_tb 

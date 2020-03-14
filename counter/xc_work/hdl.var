@@ -12,5 +12,4 @@ DEFINE NCELABOPTS $NCELABOPTS -accwarn -afile $IXC_DIR/xc_work/ixc.af -loadpli1 
 DEFINE NCSIMOPTS $NCSIMOPTS 
 DEFINE NCSIMOPTS $NCSIMOPTS -loadxc libuart.so -loadxc $IXC_DIR/xc_work/libixcg.so -sv_lib $IXC_DIR/xc_work/libixcg.so -sv_lib $XHOME/lib/64bit/libxcrt.so
 DEFINE NCSIMOPTS $NCSIMOPTS +scgafap+off -nowarn WSEM2009 -nowarn DSEM2009
-DEFINE NCSIMOPTS $NCSIMOPTS  "+dut+dut-top"
 DEFINE NCSIMRC $NCSIMRC $XHOME/etc/ixcom/xc.tcl

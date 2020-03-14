@@ -1,0 +1,29 @@
+// Log started on host: pld615 at : Sat Mar  7 16:41:32 2020
+ 
+
+******************************************************************************
+vlan - UXE, V17.1.0.p97
+(c) 2020 Cadence Design Systems, Inc.  All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+******************************************************************************
+
+Executing ... vlan (64bit) - Tue Aug 27 17:22:34 PDT 2019
+
+Command Arguments:
+  +define+UXE
+  +define+GFIFO_LBSIZE=4
+  -libmaprc ./AxisWork/tmp_libmap
+  -work IXCOM_TEMP_LIBRARY
+  /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/IXCSF.sv
+  /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/GFIFO.sv
+  -l ./AxisWork/vlan.gfifo.log
+Compiling source file "/tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/IXCSF.sv"
+Compiling source file "/tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom/GFIFO.sv"
+	Errors : 0 Warnings : 0 Info : 0
+
+ // Log end : Sat Mar  7 16:41:32 2020
+
+
+	vlan: cpu time = 0.02 sec, elapsed time = 0 sec
+		 heap memory size = 17.42M bytes
+

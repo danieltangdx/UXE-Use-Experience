@@ -4,13 +4,12 @@
 /dev/null
 -f
 ./AxisWork/ixvcg.args
-9
+8
 -ixcom
 -l
 /dev/null
 -f
 ./AxisWork/vhelab.args
-+dut+dut-top
 -singleStepCompileMode
 -libmaprc
 ./AxisWork/ssc.libmaprc

@@ -1,0 +1,4 @@
+module ixc_obf_root_port ixc_obf_root_port 0 3
+tkout tkout
+tkin tkin
+LGFreq LGFreq

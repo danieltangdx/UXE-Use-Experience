@@ -1,0 +1,11 @@
+DUMMY0 0xc_top.hasOBF
+DUMMY1 0xc_top.hasMultiLevelOBF
+DUMMY2 0xc_top.hssReset
+DUMMY3 0xc_top.hotSwapOnPI
+DUMMY4 0xc_top.anyStop
+DUMMY5 1xc_top.ixcSimTime 63 0
+DUMMY6 0xc_top.GFbusy
+DUMMY7 0xc_top.GFLBfull
+DUMMY8 0xc_top.GFGBfull
+DUMMY9 0xc_top.GFlock
+DUMMY10 0xc_top.tbcPO

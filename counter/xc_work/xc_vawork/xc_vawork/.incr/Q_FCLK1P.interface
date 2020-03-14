@@ -1,0 +1,3 @@
+module Q_FCLK1P Q_FCLK1P 0 2
+gClk gClk
+toggle toggle

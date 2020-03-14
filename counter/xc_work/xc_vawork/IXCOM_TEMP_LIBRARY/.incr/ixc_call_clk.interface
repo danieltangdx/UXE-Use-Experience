@@ -1,0 +1,8 @@
+module ixc_call_clk ixc_call_clk 3 4
+N N
+EDGE EDGE
+EXPORT EXPORT
+clkout clkout
+clkin clkin
+h2s_notify h2s_notify
+s2h_notify s2h_notify

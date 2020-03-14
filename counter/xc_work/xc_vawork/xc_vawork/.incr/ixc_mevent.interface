@@ -1,0 +1,7 @@
+module ixc_mevent ixc_mevent 4 2
+WIDTH WIDTH
+IS_EDGED IS_EDGED
+POLARITY POLARITY
+PULSE PULSE
+ev ev
+clks clks

@@ -1,0 +1,13 @@
+V O V simTime SIZE=64
+V O S stop1PO
+V O S stop2PO
+V O S stop4PO
+V O S stop3PO
+V O S stopSDLPO
+V O S stopCPFPO
+V O V eCount SIZE=64
+V O S eClkR
+M O MEM=1 PAK=2 _zzcmds[%s] LB=0 RB=15 SIZE=32
+P O ixc_assign intrBuf ./xc_work/xc_vawork/xc_vawork/ixc_assign
+P O Q_RBUFZN dum1 ./xc_work/xc_vawork/xc_vawork/q_rbufzn
+P O Q_RBUFZP dum2 ./xc_work/xc_vawork/xc_vawork/q_rbufzp

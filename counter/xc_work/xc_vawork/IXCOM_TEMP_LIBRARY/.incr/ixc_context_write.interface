@@ -1,0 +1,7 @@
+module ixc_context_write ixc_context_write 5 1
+DWIDTH DWIDTH
+NVEC NVEC
+WIDTH WIDTH
+MEMWIDTH MEMWIDTH
+MEMDEPTH MEMDEPTH
+wdata wdata

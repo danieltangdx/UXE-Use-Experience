@@ -1,0 +1,205 @@
+
+## hdl2qtdb starts at 03/07/2020 15:38:16 tang_dx V17.1.0, PID: 151041 (pld615)
+hdl2qtdb 6 9
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libmcp.so - UXE, V17.1.0
+#)libimport.so - UXE, V17.1.0.p98
+#)libdataStruct.so - UXE, V17.1.0
+#)libdbgutil.so - UXE, V17.1.0.p98
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## hdl2qtdb exits at 03/07/2020 15:38:17 Status: 0, PID: 151041
+## hdl2qtdb Elapsed time: 0:00:01, CPU time: 0:00:00.21, Memory Usage: 2.2G
+## Child Proc. CPU time: 0:00:00.07
+
+## hdl2qtdb starts at 03/07/2020 15:38:17 tang_dx V17.1.0, PID: 151173 (pld615)
+hdl2qtdb 6 9
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libmcp.so - UXE, V17.1.0
+#)libimport.so - UXE, V17.1.0.p98
+#)libdataStruct.so - UXE, V17.1.0
+#)libdbgutil.so - UXE, V17.1.0.p98
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## hdl2qtdb exits at 03/07/2020 15:38:17 Status: 0, PID: 151173
+## hdl2qtdb Elapsed time: 0:00:00, CPU time: 0:00:00.19, Memory Usage: 2.2G
+## Child Proc. CPU time: 0:00:00.06
+
+## hdl2qtdb starts at 03/07/2020 15:38:18 tang_dx V17.1.0, PID: 151357 (pld615)
+hdl2qtdb 6 9
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libmcp.so - UXE, V17.1.0
+#)libimport.so - UXE, V17.1.0.p98
+#)libdataStruct.so - UXE, V17.1.0
+#)libdbgutil.so - UXE, V17.1.0.p98
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## hdl2qtdb exits at 03/07/2020 15:38:18 Status: 0, PID: 151357
+## hdl2qtdb Elapsed time: 0:00:00, CPU time: 0:00:00.13, Memory Usage: 2.2G
+## Child Proc. CPU time: 0:00:00.06
+
+## xeCompile starts at 03/07/2020 15:38:18 tang_dx V17.1.0.p98, PID: 151477 (pld615)
+xeCompile /tools/cadence/UXE171_p98/tools.lnx86/etc/qel/ixcom.qel
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libhdl.so - UXE, V17.1.0
+#)libhdlmap.so - UXE, V17.1.0
+#)libimp.so - UXE, V17.1.0
+#)libdataStruct.so - UXE, V17.1.0
+#)libudq.so - UXE, V17.1.0.p98
+#)liboptutil.so - UXE, V17.1.0
+#)libpich.so - UXE, V17.1.0
+#)libtich.so - UXE, V17.1.0.p98
+#)libcmp.so - UXE, V17.1.0.p21
+#)libddb.so - UXE, V17.1.0
+#)libudp.so - UXE, V17.1.0.p98
+#)libPDBCommands.so - UXE, V17.1.0
+#)libhwConfig.so - UXE, V17.1.0
+#)libCompilerRT.so - UXE, V17.1.0.p98
+#)libclkBDD.a - UXE, V17.1.0.p98
+#)libsdltm.so - UXE, V17.1.0.p98
+#)libet3compile.so - UXE, V17.1.0
+#)libdb2util.so - UXE, V17.1.0
+#)liboptutil.so - UXE, V17.1.0
+#)libet3wrapper.so - UXE, V17.1.0
+#)libsideFile.so - UXE, V17.1.0.p98
+#)libdbgPrepare.so - UXE, V17.1.0.p98
+#)libucdbwrt.so - UXE, V17.1.0
+#)libucdb_sh.so - UXE, V17.1.0
+#)librppconfig.so - UXE, V17.1.0
+#)libeclutil.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libdbgutil.so - UXE, V17.1.0.p98
+#)libuxeenglic.so - UXE, V17.1.0
+#)libtcl.so - UXE, V17.1.0.p98
+#)libtk.so - UXE, V17.1.0.p98
+#)libblt.so - UXE, V17.1.0.p98
+#)libtix.so - UXE, V17.1.0.p98
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+
+## import starts at 03/07/2020 15:38:18 tang_dx V17.1.0.p98, PID: 151544 (pld615)
+import -qel -qp 0 -o .xeimp.mdl .xeimp.dil
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libimport.so - UXE, V17.1.0.p98
+#)libmcp.so - UXE, V17.1.0
+#)libdataStruct.so - UXE, V17.1.0
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## import exits at 03/07/2020 15:38:19 Status: 0, PID: 151544
+## import Elapsed time: 0:00:01, CPU time: 0:00:00.24, Memory Usage: 2.3G
+## Child Proc. CPU time: 0:00:00.08
+
+## oomr starts at 03/07/2020 15:38:19 tang_dx V17.1.0.p98, PID: 151612 (pld615)
+oomr hdldb xcva_top
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libimport.so - UXE, V17.1.0.p98
+#)libmcp.so - UXE, V17.1.0
+#)libdataStruct.so - UXE, V17.1.0
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## oomr exits at 03/07/2020 15:38:19 Status: 0, PID: 151612
+## oomr Elapsed time: 0:00:00, CPU time: 0:00:00.04, Memory Usage: 1.8G
+## Child Proc. CPU time: 0:00:00.08
+## xeCompile exits at 03/07/2020 15:38:19 Status: 1, PID: 151477
+## xeCompile Elapsed time: 0:00:01, CPU time: 0:00:00.32, Memory Usage: 1.5G
+## Child Proc. CPU time: 0:00:00.56
+
+## xeCompile starts at 03/07/2020 16:41:34 tang_dx V17.1.0.p98, PID: 153901 (pld615)
+xeCompile /tools/cadence/UXE171_p98/tools.lnx86/etc/qel/ixcom.qel
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libhdl.so - UXE, V17.1.0
+#)libhdlmap.so - UXE, V17.1.0
+#)libimp.so - UXE, V17.1.0
+#)libdataStruct.so - UXE, V17.1.0
+#)libudq.so - UXE, V17.1.0.p98
+#)liboptutil.so - UXE, V17.1.0
+#)libpich.so - UXE, V17.1.0
+#)libtich.so - UXE, V17.1.0.p98
+#)libcmp.so - UXE, V17.1.0.p21
+#)libddb.so - UXE, V17.1.0
+#)libudp.so - UXE, V17.1.0.p98
+#)libPDBCommands.so - UXE, V17.1.0
+#)libhwConfig.so - UXE, V17.1.0
+#)libCompilerRT.so - UXE, V17.1.0.p98
+#)libclkBDD.a - UXE, V17.1.0.p98
+#)libsdltm.so - UXE, V17.1.0.p98
+#)libet3compile.so - UXE, V17.1.0
+#)libdb2util.so - UXE, V17.1.0
+#)liboptutil.so - UXE, V17.1.0
+#)libet3wrapper.so - UXE, V17.1.0
+#)libsideFile.so - UXE, V17.1.0.p98
+#)libdbgPrepare.so - UXE, V17.1.0.p98
+#)libucdbwrt.so - UXE, V17.1.0
+#)libucdb_sh.so - UXE, V17.1.0
+#)librppconfig.so - UXE, V17.1.0
+#)libeclutil.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libdbgutil.so - UXE, V17.1.0.p98
+#)libuxeenglic.so - UXE, V17.1.0
+#)libtcl.so - UXE, V17.1.0.p98
+#)libtk.so - UXE, V17.1.0.p98
+#)libblt.so - UXE, V17.1.0.p98
+#)libtix.so - UXE, V17.1.0.p98
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+
+## import starts at 03/07/2020 16:41:35 tang_dx V17.1.0.p98, PID: 153968 (pld615)
+import -qel -qp 0 -o .xeimp.mdl .xeimp.dil
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libimport.so - UXE, V17.1.0.p98
+#)libmcp.so - UXE, V17.1.0
+#)libdataStruct.so - UXE, V17.1.0
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## import exits at 03/07/2020 16:41:35 Status: 0, PID: 153968
+## import Elapsed time: 0:00:00, CPU time: 0:00:00.23, Memory Usage: 2.3G
+## Child Proc. CPU time: 0:00:00.08
+
+## oomr starts at 03/07/2020 16:41:35 tang_dx V17.1.0.p98, PID: 154035 (pld615)
+oomr hdldb xcva_top
+## 64bit program from /tools/cadence/UXE171_p98/tools.lnx86/bin on Linux 2.6.32-696.el6.x86_64 64bit
+(c) 1991-2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+See files in <rootdir>/share/uxe/install/Copyrights
+#)libimport.so - UXE, V17.1.0.p98
+#)libmcp.so - UXE, V17.1.0
+#)libdataStruct.so - UXE, V17.1.0
+#)libhdlmap.so - UXE, V17.1.0
+#)libqt.so - UXE, V17.1.0.p98
+#)libqtutil.so - UXE, V17.1.0
+#)libsd.so - UXE, V17.1.0.p98
+## oomr exits at 03/07/2020 16:41:35 Status: 0, PID: 154035
+## oomr Elapsed time: 0:00:00, CPU time: 0:00:00.04, Memory Usage: 1.8G
+## Child Proc. CPU time: 0:00:00.07
+## xeCompile exits at 03/07/2020 16:41:42 Status: 1, PID: 153901
+## xeCompile Elapsed time: 0:00:08, CPU time: 0:00:00.30, Memory Usage: 1.5G
+## Child Proc. CPU time: 0:00:00.55

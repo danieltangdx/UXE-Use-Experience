@@ -1,0 +1,8 @@
+DUMMY0 1xcva_top.IXC_GFIFO.I.iData 511 0
+DUMMY1 1xcva_top.IXC_GFIFO.I.tId 15 0
+DUMMY2 1xcva_top.IXC_GFIFO.I.oData 511 0
+DUMMY3 0xcva_top.IXC_GFIFO.I.oDataEn
+DUMMY4 1xcva_top.IXC_GFIFO.I.oDataLen 3 0
+oargB_DUMMY0 0oargB
+sten_DUMMY1 0sten
+opktl_DUMMY2 0opktl

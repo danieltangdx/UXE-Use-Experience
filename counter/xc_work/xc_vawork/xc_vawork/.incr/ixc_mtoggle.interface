@@ -1,0 +1,6 @@
+module ixc_mtoggle ixc_mtoggle 3 2
+WIDTH WIDTH
+RTLONLY RTLONLY
+PULSE PULSE
+p p
+v v

@@ -1,6 +1,6 @@
 echo Compiling packages
 Compiling packages
-gcc  -m64 -fPIC -O -shared -o xc_work/libixcg.so xc_work/xcdpi.c 2> xc_work/gcc_error.log
+gcc  -m64 -fPIC -O -shared -o xc_work/libixcg.so xc_work/xcdpi.c -I`ncroot`/tools/include 2> xc_work/gcc_error.log
 ncvlog -64bit -append_log -logfile xc_work/irun.log -cdslib xc_work/cds.lib -hdlvar xc_work/hdl.var -nowarn DLNCML -nowarn TMTPAR -WORK xc_ncwork  -f xc_work/v/ncvlog-xc_ncwork-v2001.f
 ncvlog(64): 15.20-s072: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
 ncvlog -64bit -append_log -logfile xc_work/irun.log -cdslib xc_work/cds.lib -hdlvar xc_work/hdl.var -nowarn DLNCML -nowarn TMTPAR -WORK xc_ncwork -sv xc_work/v/xc_top.v -incdir /tools/cadence/UXE171_p98/tools.lnx86/etc/ixcom

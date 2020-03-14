@@ -2,13 +2,12 @@
 // File created by:  irun
 // Do not modify this file
 //
+-ACCESS
++rwc
 -NOWARN
-DLNCML
--NCERROR
-CUNOTB
+CUVIHR
 -MESSAGES
-xc_ncwork.counter_tb
-xc_ncwork.xc_top
+counter_tb
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
 -RUNMODE
@@ -16,4 +15,6 @@ xc_ncwork.xc_top
 ./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
 -HDLVAR
 ./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-WORK
+worklib
 -IRUNHASTOP

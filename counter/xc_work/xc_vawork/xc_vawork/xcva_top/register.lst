@@ -1,0 +1,7 @@
+P O counter_tb counter_tb ./xc_work/xc_vawork/xc_vawork/counter_tb
+P O IXC_GFIFO IXC_GFIFO ./xc_work/xc_vawork/IXCOM_TEMP_LIBRARY/ixc_gfifo
+P O ixc_time ixc_time ./xc_work/xc_vawork/IXCOM_TEMP_LIBRARY/ixc_time
+P O _ixc_isc _ixc_isc ./xc_work/xc_vawork/xc_vawork/_ixc_isc
+P O xc_top xc_top ./xc_work/xc_vawork/xc_vawork/xc_top
+P O ASSERTION ASSERTION ./xc_work/xc_vawork/xc_vawork/assertion
+P O Q_HDL_ROOT Q_HDL_ROOT ./xc_work/xc_vawork/xc_vawork/q_hdl_root

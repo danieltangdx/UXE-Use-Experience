@@ -1,0 +1,3 @@
+DUT: xc_ncwork.counter:module
+DUT: IXCOM_TEMP_LIBRARY.IXC_GFIFO:module
+DUT: IXCOM_TEMP_LIBRARY.ixc_time:module

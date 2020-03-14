@@ -1,0 +1,4 @@
+module axis_eclk axis_eclk 1 2
+beh beh
+pclk pclk
+in DUMMY1

@@ -9,8 +9,7 @@ vlan:
 # complie file use the file list,
 #	vlan -sv -f counter\
 # complie the file by file name
-	vlan -sv counter.v
-	vlan -sv counter_tb.v
+	vlan -sv -f counter -incdir ./rtl
 #######################################################################
 #
 # ixcom elab/codegen hardware or software model, compile the DUT
@@ -18,17 +17,17 @@ vlan:
 #######################################################################
 ixcom:
 	ixcom -64 +dut+counter -top counter\
-		-nccompile +tb_import_systf+fdisplay \
+		-nccompile +tb_import_systf+fdisplaygit clone https://github.com/seisman/how-to-write-makefile.git
 		+xcDesignTop+counter_tb.dut=counter\
-		 -ua  -timescale 1ps/100fs
+	  -timescale 1ps/100fs
 #######################################################################
 #
 # irun compile the TBelab/codegen hardware or software model
 #
 #######################################################################
 irun:
-	irun -64bit  -c -sv -f xc_work/irun.f -vtimescale 1ps/100fs -uvm \
-	  -access +rwc -nowarn CUVIHR  -top counter_tb
+	irun -64bit  -c  -f xc_work/irun.f -vtimescale 1ps/100fs \
+	-top counter_tb
 
 pxp_run:
 	xeDebug --ncsim +UVM_TESTNAME=$(TEST) -- -gui -input run.tcl &

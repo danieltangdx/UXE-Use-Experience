@@ -1,0 +1,12 @@
+module ixc_mevClk ixc_mevClk 5 6
+WIDTH WIDTH
+LOOP DUMMY1
+IS_EDGED IS_EDGED
+POLARITY POLARITY
+DS DS
+xclk xclk
+clks clks
+ens ens
+loop DUMMY2
+clkOn clkOn
+bwOn bwOn

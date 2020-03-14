@@ -1,0 +1,5 @@
+module ixc_mpulse ixc_mpulse 2 2
+WIDTH WIDTH
+PULSE PULSE
+p p
+v v

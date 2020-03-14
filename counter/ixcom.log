@@ -8,52 +8,5 @@ See files in <rootdir>/share/uxe/install/Copyrights
 Executing ... ixcom (64bit) - Tue Aug 27 17:22:10 PDT 2019
 
 Command Arguments:
-  +dut+dut
-  -top counter_tb.v
-  -target xecompile
-
-// ixcom started at : Sat Mar  7 14:45:42 2020
-
-Info!	 ./AxisWork already exists
-
-// vhelab started at : Sat Mar  7 14:45:43 2020
-
-// Log started on host: pld615 at : Sat Mar  7 14:45:43 2020
- 
-
-******************************************************************************
-vhelab - UXE, V17.1.0.p97
-(c) 2020 Cadence Design Systems, Inc.  All rights reserved worldwide.
-See files in <rootdir>/share/uxe/install/Copyrights
-******************************************************************************
-
-Executing ... vhelab (64bit) - Tue Aug 27 17:22:15 PDT 2019
-
-Command Arguments:
-  -ixcom
-  -l /dev/null
-  -f ./AxisWork/vhelab.args
-    +dut+dut
-    -top counter_tb.v
-Warning!
-  +dut option was specified without an explicit hardware platform.(i.e. "-ua" was not specified)
-  +dut, +dutignore, +dutexcl options will be ignored.
-
-Error!		[VHELAB_ERR]
-	Logical library counter_tb is not visible
-
-Error!		[VHELAB_ERR]
-	Logical library counter_tb is not visible
-
-	Errors : 2 Warnings : 0 Info : 0
-
- // Log end : Sat Mar  7 14:45:43 2020
-
-
-// vhelab ended at : Sat Mar  7 14:45:43 2020, memory used by IXCOM : 16.67M bytes
-
-Error!		[FLOW_FAILED]
-	Failure to build target (vhelab)
-
-// ixcom ended at : Sat Mar  7 14:45:43 2020, memory used by IXCOM : 16.67M bytes
-
+  -helpall
+Error! Illegal option '-helpall' specified in command-line

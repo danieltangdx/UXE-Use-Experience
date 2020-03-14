@@ -1,0 +1,13 @@
+DUMMY0 0xcva_top.xc_top.callEmu
+DUMMY1 0xcva_top.xc_top.callEmuPre
+DUMMY2 0xcva_top.xc_top.tbcPO
+DUMMY3 0xcva_top.xc_top.osfWait
+DUMMY4 0xcva_top.xc_top.isfWait
+DUMMY7 0genblk1
+DUMMY8 0genblk1
+DUMMY9 0h2sstate
+DUMMY10 0genblk1
+DUMMY11 0s2hstate
+h2smport_DUMMY0 0h2smport
+s2hxtail_DUMMY1 0s2hxtail
+ns2hd_DUMMY2 0ns2hd

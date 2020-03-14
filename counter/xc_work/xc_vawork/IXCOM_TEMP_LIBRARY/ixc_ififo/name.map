@@ -1,0 +1,10 @@
+DUMMY0 0xc_top.hasIBF
+DUMMY1 0xc_top.hssReset
+DUMMY2 0xc_top.asyncCall
+DUMMY3 0xc_top.hotSwapOnPI
+DUMMY4 0xc_top.GFlock
+DUMMY6 0tId
+DUMMY7 0mark
+DUMMY8 0markN
+DUMMY9 0vlen
+DUMMY10 0odly

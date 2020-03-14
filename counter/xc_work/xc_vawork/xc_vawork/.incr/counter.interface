@@ -1,0 +1,3 @@
+module counter counter 0 2
+clk clk
+out DUMMY0

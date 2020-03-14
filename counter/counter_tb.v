@@ -23,6 +23,6 @@ module counter_tb;
 	reg clk = 1'b0;
 	always #5 clk = ~clk;
 	wire [31:0] out;
-	counter dut0(clk, out);
+	counter dut0(.clk(clk),.out(out));
 	initial $monitor(out);
 endmodule

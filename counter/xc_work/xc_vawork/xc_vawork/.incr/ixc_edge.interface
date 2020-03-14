@@ -1,0 +1,5 @@
+module ixc_edge ixc_edge 2 2
+DIR DIR
+ASYNC ASYNC
+ev ev
+s s

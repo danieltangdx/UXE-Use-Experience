@@ -1,0 +1,16 @@
+DUMMY0 0xc_top.GFlock
+DUMMY2 0genblk1
+DUMMY4 3oreq *  odata *
+DUMMY5 0genblk2
+DUMMY7 3oreq *  odata *  olen *
+DUMMY8 0genblk2
+DUMMY10 3oreq *  odata *  ocbid *
+DUMMY11 0genblk2
+DUMMY13 3oreq *  odata *  ocbid *  olen *
+xdata_DUMMY0 0xdata
+xlen_DUMMY1 0xlen
+sel_DUMMY2 0sel
+_zzLB_DUMMY3 0_zzLB
+_zzLB_DUMMY4 0_zzLB
+_zzLB_DUMMY5 0_zzLB
+_zzLB_DUMMY6 0_zzLB
