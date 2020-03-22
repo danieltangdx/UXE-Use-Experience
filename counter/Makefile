@@ -41,3 +41,5 @@ clean:
 		counter.bak.phy counter.phy counter.shm lic.log simvision384423.diag monitor315540.msg\
 		simvision.log trace.bak.phy trace.phy trace.shm waveform.bak.phy waveform.phy\
 		waveform.shm waves.bak.phy waves.phy
+
+
